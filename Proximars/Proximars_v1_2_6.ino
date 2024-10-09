@@ -1,4 +1,4 @@
-// Code réalisé par Victor Simonet Alves Santos avec la collaboration du Lycée Déodat de Séverac et Stéphan Jude Hamilton.
+// Code réalisé par Victor Simonet Alves Santos
 // Mail: victorcaue@hotmail.fr
 // Cinquième version officielle du code arduino pour la serre proximars.
 // Modifications: Ajout du buzzer selon la qualité de l'air.
