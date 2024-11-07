@@ -1,9 +1,9 @@
-# Arduino Proximars.
+# 🪐 Arduino Proximars 
 
-## Hardware.
+## Hardware
 
 
-### obligatory.
+### Requirements
 
   * [Arduino Uno rev3](https://store.arduino.cc/en-fr/products/arduino-uno-rev3/) Or [Arduino Mega 2560 rev3](https://store.arduino.cc/en-fr/products/arduino-mega-2560-rev3/).
   * [RGB backlight positive LCD 16x2](https://www.adafruit.com/product/398).
@@ -22,9 +22,9 @@
   * [button](https://www.lextronic.fr/module-bouton-grove-101020003-28884.html).
 
 
-## Software.
+## Software
 
-### Libraries.
+### Libraries
 
 * `proximars/libraries/Adafruit_BusIO` I2C library from Adafruit.
 * `proximars/libraries/Adafruit_NeoPixel` Led strips library from Adafruit.
@@ -35,7 +35,7 @@
 * `proximars/libraries/Grove_-_LCD_RGB_Backlight` LCD RGB library.
 * `proximars/libraries/Grove_-_LCD_RGB_Backlight` LCD RGB library.
 
-### Mobile App.
+### Mobile App
 
 * You can find the mobile app in the `proximars/proximars.aia` file. To install it, you will need to use the website [MIT App Inventor](https://appinventor.mit.edu/).
 
