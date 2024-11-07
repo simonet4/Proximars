@@ -43,5 +43,5 @@
 
 ps: The Arduino needs to be connected via Bluetooth to a cellphone to recover the time and light up the strips when it's the night.
 
-
+** Thanks **
 This project was carried out in collaboration with CNES and participated in the night of researchers at the "Cité de l'Espace" in toulouse . 
