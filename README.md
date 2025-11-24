@@ -2,39 +2,43 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAC90lEQVRIie2WXW8UVRzGn3N226FNq8RSElCM8TuYeMMX4EbDBR+ICxICpoYEFqk11rS7nZfdLhBuNCEKxHjFpQmGFnUxSI3G1rS7O505Py929iVltt0aDF44yT+Z8/6b//Occ0aRRPAKQ4GEL0skHSoCiRXTL6/K4mfvS4XRxvcAKkYc5klx+BLLxvbqnIMwg3IuPXCOi7Mn/6MALRJIUlrNmJRdAJLEQZKCizuLwVCASAbXjjv9kxSXjQHYgV79+bfeHpIBFxNIRLK0s6pqppfrdtkHwJfwZXoaO9efOhzQPhzqgR5A8QWAXpd9APa6nCEAw034P8CrBAjeO81q1pAHEEncO3Pu0ADpxhPKVlSMyQcIZViYGIdv7pK0/spOtJwM7PzGL+EyC94UwYgAC+MzzJ18B3a2WBmaASuqErv37pMmDM1AE2hU672jdBSAmxKl2VkSYMUeIMHS+6d7DXkAgcSXH545vATPn+5/GYUSNVnir++Caw6XIHU0aj412ZEz4Mvw8bFZ2tnxnQvQjbQewNoTfIl5T/B0HRpr3OwC/Pwjv1+/PjC5oNHpw/pPuQsEEteOvgGNdW4dBND1w2A5lHLN87LiBQB/z4Ju+9d+agfgyrZ/r3fv+EEJfNN/ryp/C+YC7P3iR/PX8CVKxoNnz6gXRNUIGmt89OYJQonHizdoPnzI1VPv4kt8f+ECf353n1WJyAoaG1z1pg/2wF6AUILWFqHE5eOnqBQ8Hl26wiYpkTF8+vpxykakSYuK8XBxkyVjmdc4dYnPxi1pEyIZzh+ZojJW/OcAkZnsy9KGkjxuSCxKkHZ2CrstKipSm/AgjvnktWnS9jYleZQ0Qa0wAkAgMTd5jLnJGS5PzUC83QFJYspj0/wQLOGePyYoHGHj2wedM2QAYLEwwUXvKF/YMb764Cxuc4sVGfhjk9ujSPD5mPBt30R31NnLXdOVbee3qyqxbA2+xK0sW3WJsjHUJMqmSFkey9lci0Wbb8LKv7S9Ro2/AYdeBW+rWK46AAAAAElFTkSuQmCC)](https://mit-license.org/) 
 
-## Hardware
 
-### Requirements
+An automated Arduino-based ecosystem monitor and controller. Designed for terrariums or small plant environments, Proximars manages light, watering, humidity, and air quality autonomously.
 
-  * [Arduino Uno rev3](https://store.arduino.cc/en-fr/products/arduino-uno-rev3/) Or [Arduino Mega 2560 rev3](https://store.arduino.cc/en-fr/products/arduino-mega-2560-rev3/).
-  * [RGB backlight positive LCD 16x2](https://www.adafruit.com/product/398).
-  * [I2C Temperature and Humidity Sensor](https://www.adafruit.com/product/5183).
-  * [I2C Light Sensor Grove](https://wiki.seeedstudio.com/Grove-Digital_Light_Sensor/).
-  * [NeoPixel LED Strip - 30 LEDs](https://www.adafruit.com/product/4801).
-  * [SGP30 Air Quality Sensor](https://www.adafruit.com/product/3709).
-  
-### optional, replace with the material of your choice.
+![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=flat-square&logo=Arduino&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Functional-success)
 
-  * [Fan](https://www.adafruit.com/product/3368).
-  * [Heating](https://www.adafruit.com/product/1481).
-  * [Water Pump](https://www.adafruit.com/product/4546) X 2 (watering and Bubbler).
-  * [Grove Buzzer](https://www.lextronic.fr/module-grove-buzzer-107020109-58139.html).
-  * [bluetooth](https://www.lextronic.fr/module-grove-ble-dual-model-113020009-39435.html).
-  * [button](https://www.lextronic.fr/module-bouton-grove-101020003-28884.html).
+## 🎮 Try it Live!
 
+You can test the logic of this project directly in your browser without any hardware. Click the link below to open the Wokwi simulation:
 
-## Software
+[![Wokwi Simulation](https://img.shields.io/badge/Wokwi-Test%20Simulation-blue?style=for-the-badge&logo=wokwi)](https://wokwi.com/projects/448491380777419777)
 
-### Libraries
+> **Note:** The simulation uses potentiometers to mimic sensors (SGP30, TSL2561) that are not available virtually.
 
-* `proximars/libraries/Adafruit_BusIO` I2C library from Adafruit.
-* `proximars/libraries/Adafruit_NeoPixel` Led strips library from Adafruit.
-* `proximars/libraries/Adafruit_SGP30_Sensor` air quality sensor library from Adafruit.
-* `proximars/libraries/Adafruit_TSL2561` Luminosity sensor library from Adafruit.
-* `proximars/libraries/Adafruit_Unified_Sensor` Temperature and humidity library from Adafruit.
-* `proximars/libraries/DHT_sensor_library` Thermocouple library.
-* `proximars/libraries/Grove_-_LCD_RGB_Backlight` LCD RGB library.
-* `proximars/libraries/Grove_-_LCD_RGB_Backlight` LCD RGB library.
+## ✨ Features
+
+* **🌱 Automated Watering:** Activates based on soil moisture levels.
+* **💡 Smart Lighting:** Adapts NeoPixel grow lights based on ambient brightness (Lux) and time of day (via Bluetooth).
+* **🌡️ Climate Control:** Controls a fan and heater based on temperature thresholds.
+* **🌬️ Air Quality Monitoring:** Monitors eCO2 and TVOC levels using the SGP30 sensor, with an audible alarm.
+* **📱 Connectivity:** Bluetooth communication for data logging and time synchronization.
+* **📊 Display:** Grove RGB LCD showing real-time metrics with color-coded alerts.
+
+## 🛠️ Hardware Requirements
+
+* **Microcontroller:** Arduino Uno or compatible
+* **Sensors:**
+    * DHT22 (Temperature & Humidity)
+    * Adafruit SGP30 (Air Quality)
+    * Adafruit TSL2561 (Lux/Brightness)
+    * Analog Soil Moisture Sensor
+* **Actuators:**
+    * NeoPixel LED Strips (x3)
+    * Relay Modules (for Heater, Fan, Bubbler, Pump)
+    * Buzzer
+* **Display:** Grove RGB LCD (I2C)
+* **Comms:** HC-05/HC-06 Bluetooth Module
 
 ### Mobile App
 
@@ -44,6 +48,33 @@
 
 ps: The Arduino needs to be connected via Bluetooth to a cellphone to recover the time and light up the strips when it's the night.
 
+## 📂 Project Structure
+
+The code is modularized for better maintainability:
+
+* `Proximars.ino`: Main entry point and orchestration logic.
+* `Config.h`: Pin definitions and configuration constants.
+* `Sensors.h`: Handles reading from DHT, SGP30, TSL2561, and Soil sensors.
+* `Actuators.h`: Controls Relays, NeoPixels, and Buzzer.
+* `Display.h`: Manages the Grove RGB LCD output.
+* `Bluetooth.h`: Handles Serial communication.
+
+## 🚀 Installation
+
+1.  Clone this repository.
+2.  Install the required libraries via Arduino IDE Library Manager:
+    * `DHT sensor library`
+    * `Adafruit NeoPixel`
+    * `Adafruit SGP30`
+    * `Adafruit TSL2561`
+    * `Grove - LCD RGB Backlight`
+3.  Open `Proximars.ino`.
+4.  Upload to your board.
+
 **Thanks**
 
 This project was carried out in collaboration with CNES and participated in the night of researchers at the "Cité de l'Espace" in toulouse . 
+
+## 📄 License
+
+MIT License - Copyright (c) 2024 simonet4
